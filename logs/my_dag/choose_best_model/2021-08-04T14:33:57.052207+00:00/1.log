@@ -1,0 +1,24 @@
+[2021-08-04 14:34:09,976] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: my_dag.choose_best_model 2021-08-04T14:33:57.052207+00:00 [queued]>
+[2021-08-04 14:34:09,988] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: my_dag.choose_best_model 2021-08-04T14:33:57.052207+00:00 [queued]>
+[2021-08-04 14:34:09,989] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-04 14:34:09,989] {taskinstance.py:1088} INFO - Starting attempt 1 of 1
+[2021-08-04 14:34:09,989] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-04 14:34:10,004] {taskinstance.py:1107} INFO - Executing <Task(BranchPythonOperator): choose_best_model> on 2021-08-04T14:33:57.052207+00:00
+[2021-08-04 14:34:10,012] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'my_dag', 'choose_best_model', '2021-08-04T14:33:57.052207+00:00', '--job-id', '2676', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/my_dag.py', '--cfg-path', '/tmp/tmpgko8n4ya', '--error-file', '/tmp/tmpoewybtxh']
+[2021-08-04 14:34:10,012] {standard_task_runner.py:77} INFO - Job 2676: Subtask choose_best_model
+[2021-08-04 14:34:10,009] {standard_task_runner.py:52} INFO - Started process 300 to run task
+[2021-08-04 14:34:10,058] {logging_mixin.py:104} INFO - Running <TaskInstance: my_dag.choose_best_model 2021-08-04T14:33:57.052207+00:00 [running]> on host 04479ea62028
+[2021-08-04 14:34:10,117] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=my_dag
+AIRFLOW_CTX_TASK_ID=choose_best_model
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-04T14:33:57.052207+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-08-04T14:33:57.052207+00:00
+[2021-08-04 14:34:10,128] {python.py:151} INFO - Done. Returned value was: accurate
+[2021-08-04 14:34:10,128] {skipmixin.py:124} INFO - Following branch accurate
+[2021-08-04 14:34:10,137] {skipmixin.py:155} INFO - Skipping tasks ['inaccurate', 'value_5']
+[2021-08-04 14:34:10,191] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=my_dag, task_id=choose_best_model, execution_date=20210804T143357, start_date=20210804T143409, end_date=20210804T143410
+[2021-08-04 14:34:10,231] {taskinstance.py:1265} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-08-04 14:34:10,267] {local_task_job.py:149} INFO - Task exited with return code 0

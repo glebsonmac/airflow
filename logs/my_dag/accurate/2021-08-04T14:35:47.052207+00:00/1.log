@@ -1,0 +1,27 @@
+[2021-08-04 14:36:00,460] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: my_dag.accurate 2021-08-04T14:35:47.052207+00:00 [queued]>
+[2021-08-04 14:36:00,473] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: my_dag.accurate 2021-08-04T14:35:47.052207+00:00 [queued]>
+[2021-08-04 14:36:00,473] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-04 14:36:00,473] {taskinstance.py:1088} INFO - Starting attempt 1 of 1
+[2021-08-04 14:36:00,473] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-04 14:36:00,490] {taskinstance.py:1107} INFO - Executing <Task(BashOperator): accurate> on 2021-08-04T14:35:47.052207+00:00
+[2021-08-04 14:36:00,499] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'my_dag', 'accurate', '2021-08-04T14:35:47.052207+00:00', '--job-id', '2732', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/my_dag.py', '--cfg-path', '/tmp/tmpp0ewux6z', '--error-file', '/tmp/tmpra5lfe4s']
+[2021-08-04 14:36:00,500] {standard_task_runner.py:77} INFO - Job 2732: Subtask accurate
+[2021-08-04 14:36:00,495] {standard_task_runner.py:52} INFO - Started process 579 to run task
+[2021-08-04 14:36:00,545] {logging_mixin.py:104} INFO - Running <TaskInstance: my_dag.accurate 2021-08-04T14:35:47.052207+00:00 [running]> on host 04479ea62028
+[2021-08-04 14:36:00,609] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=my_dag
+AIRFLOW_CTX_TASK_ID=accurate
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-04T14:35:47.052207+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-08-04T14:35:47.052207+00:00
+[2021-08-04 14:36:00,610] {subprocess.py:52} INFO - Tmp dir root location: 
+ /tmp
+[2021-08-04 14:36:00,611] {subprocess.py:63} INFO - Running command: ['bash', '-c', "echo 'accurate'"]
+[2021-08-04 14:36:00,621] {subprocess.py:74} INFO - Output:
+[2021-08-04 14:36:00,622] {subprocess.py:78} INFO - accurate
+[2021-08-04 14:36:00,623] {subprocess.py:82} INFO - Command exited with return code 0
+[2021-08-04 14:36:00,655] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=my_dag, task_id=accurate, execution_date=20210804T143547, start_date=20210804T143600, end_date=20210804T143600
+[2021-08-04 14:36:00,689] {taskinstance.py:1265} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-08-04 14:36:00,714] {local_task_job.py:149} INFO - Task exited with return code 0
